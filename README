@@ -56,15 +56,21 @@ $.swfupload.getInstance('.swfupload-control');
 
 Event Names (and, their, params)
 --------------------------------
+
+swfuploadPreload (event)
+swfuploadLoadFailed (event)
 swfuploadLoaded (event)
+fileDialogStart (event)
 fileQueued (event, file)
 fileQueueError (event, file, errorCode, message)
-fileDialogStart (event)
 fileDialogComplete (event, numFilesSelected, numFilesQueued)
+// uploadResizeStart (event) // can't see where this is called from their code
 uploadStart (event, file)
-uploadProgress (event, file, bytesLoaded)
-uploadSuccess (event, file, serverData)
-uploadComplete (event, file)
+uploadProgress (event, file, bytesComplete, bytesTotal)
 uploadError (event, file, errorCode, message)
-// event from swfupload.queue.js
-queueComplete (event, uploadCount)
+uploadSuccess (event, file, serverData, responseReceived)
+uploadComplete (event, file)
+mouseClick (event)
+mouseOut (event)
+mouseOver (event)
+queueComplete (event, uploadCount) // from queue plugin
